@@ -13,7 +13,8 @@ public class TextSaver {
     private File file;
     public void saveTextToFile(String text) {
         String string = transformer.transform(text);
-        file = new File("D:\\Java\\OtherCurs2\\Inheritance\\TextTransformer\\textTransform.txt");
+        //"D:\\Java\\OtherCurs2\\Inheritance\\TextTransformer\\textTransform.txt" // так путь не пишем
+        file = new File("textTransform.txt");
         try (FileOutputStream fos = new FileOutputStream(file, true)) {
             string =string + "\r\n";
             byte[] buffer = string.getBytes();
